@@ -105,8 +105,6 @@ void main(void) {
   int cellId = gl_VertexID / 15;
   int vertexId = gl_VertexID % 15;
 
-  vec3 halfCellSize = u_cellSize * 0.5;
-
   ivec3 cellIdx = ivec3(
     cellId % u_cellNum.x, (cellId % (u_cellNum.x * u_cellNum.y)) / u_cellNum.x, cellId / (u_cellNum.x * u_cellNum.y));
   vec3 cellCorner = (0.5 * vec3(u_cellNum) - vec3(cellIdx)) * u_cellSize;
